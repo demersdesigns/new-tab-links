@@ -1,3 +1,5 @@
+import firebase from 'firebase'
+
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyC-O1NS5ZiPXXFns92BKkwbkcUqoMG0EHs",
@@ -9,5 +11,4 @@ var config = {
 };
 
 firebase.initializeApp(config);
-
 export default firebase;
