@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import firebase from '../helpers/firebase.js';
 
 class LinkList extends Component {
+  removeLink(linkId){
+    const linkRef = firebase.database().ref(`/links/${linkId}`);
+    linkRef.remove();
+  }
   render() {
     return (
       <ul>
@@ -8,7 +13,7 @@ class LinkList extends Component {
           const { linkTitle, linkUrl } = link;
           return(
             <li key={idx}>
-              <a href={linkUrl}>{linkTitle}</a>
+              <a href={linkUrl}>{linkTitle}</a> | <button onClick={() => this.removeLink(link.id)}>Remove</button>
             </li>
           )
         })}
