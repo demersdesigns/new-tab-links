@@ -14,11 +14,7 @@ class LinkList extends Component {
           return(
             <li key={idx}>
               <a href={linkUrl}>{linkTitle}</a>
-              {this.props.user ? 
-                <button onClick={ () => this.removeLink(link.id) }>Remove</button>
-                :
-                null
-              }
+              <button onClick={ () => this.removeLink(link.id) }>Remove</button>
             </li>
           )
         })}
