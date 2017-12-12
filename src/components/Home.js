@@ -73,7 +73,7 @@ export default withAuth(class Home extends Component{
           <section className="display-links">
             <div className="wrapper">
               <h2>Links</h2>
-              <LinkList links={this.state.links}/>
+              <LinkList links={this.state.links} authenticated={this.state.authenticated} />
             </div>
           </section>
         </div>
