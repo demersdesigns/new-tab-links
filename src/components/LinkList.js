@@ -14,7 +14,7 @@ class LinkList extends Component {
           return(
             <li key={idx}>
               <a href={linkUrl}>{linkTitle}</a>
-              {this.props.user ? 
+              {this.props.authenticated ? 
                 <button onClick={ () => this.removeLink(link.id) }>Remove</button>
                 :
                 null
